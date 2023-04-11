@@ -284,8 +284,8 @@ body {
     flex-direction: row-reverse;
   }
   .card__info-box {
-    height: 1000px;
-    width: 1200px;
+    height: 800px;
+    width: 1000px;
   }
   .card__form-info {
     justify-content: center;
@@ -322,41 +322,41 @@ body {
     font-size: 2rem;
   }
   .card__img {
-    height: 1000px;
+    height: 800px;
     width: 600px;
     background-size: cover;
     background-position: top center;
   }
   .card__img-logo {
     top: 23%;
-    left: 35%;
+    left: 45%;
     width: 100px;
   }
   .card__img-front-card, .card__text-box-img {
     top: 20%;
-    left: 30%;
-    width: 90%;
+    left: 40%;
+    width: 80%;
   }
   .card__text-box-img {
-    top: 35%;
-    left: 35%;
+    top: 38%;
+    left: 46%;
   }
   .card__img-number {
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
   .card__text-img {
-    transform: translate(2%, 200%);
-    width: 460px;
+    transform: translate(0%, 170%);
+    width: 410px;
     font-size: 1.6rem;
   }
   .card__img-back-card {
-    top: 55%;
+    top: 56%;
     left: 50%;
     width: 80%;
   }
   .card__second-text {
     left: 113%;
-    top: 66.5%;
+    top: 70.5%;
     font-size: 2rem;
   }
   .card__popup-img {

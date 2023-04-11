@@ -284,8 +284,8 @@ body {
 	.card {
 		flex-direction: row-reverse;
 		&__info-box {
-			height: 1000px;
-			width: 1200px;
+			height: 800px;
+			width: 1000px;
 		}
 		&__form-info {
 			justify-content: center;
@@ -322,42 +322,42 @@ body {
 			font-size: 2rem;
 		}
 		&__img {
-			height: 1000px;
+			height: 800px;
 			width: 600px;
 			background-size: cover;
 			background-position: top center;
 		}
 		&__img-logo {
 			top: 23%;
-			left: 35%;
+			left: 45%;
 			width: 100px;
 		}
 		&__img-front-card,
 		&__text-box-img {
 			top: 20%;
-			left: 30%;
-			width: 90%;
+			left: 40%;
+			width: 80%;
 		}
 		&__text-box-img {
-			top: 35%;
-			left: 35%;
+			top: 38%;
+			left: 46%;
 		}
 		&__img-number {
-			font-size: 4rem;
+			font-size: 3.4rem;
 		}
 		&__text-img {
-			transform: translate(2%, 200%);
-			width: 460px;
+			transform: translate(0%, 170%);
+			width: 410px;
 			font-size: 1.6rem;
 		}
 		&__img-back-card {
-			top: 55%;
+			top: 56%;
 			left: 50%;
 			width: 80%;
 		}
 		&__second-text {
 			left: 113%;
-			top: 66.5%;
+			top: 70.5%;
 			font-size: 2rem;
 		}
 		&__popup-img {

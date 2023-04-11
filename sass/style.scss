@@ -1,0 +1,370 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Space Grotesk', sans-serif;
+	background-color: hsl(0, 0%, 100%);
+	font-size: 18px;
+}
+.card {
+	display: flex;
+	flex-direction: column-reverse;
+	&__info-box {
+		position: relative;
+		padding: 2em 0.6em 2em 0.6em;
+		height: 350px;
+		width: 280px;
+		background-color: hsl(0, 0%, 100%);
+		text-align: center;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.363);
+		overflow: hidden;
+	}
+	&__form-info {
+		display: flex;
+		flex-direction: column;
+		padding: 1em;
+		text-align: left;
+	}
+	&__form-info label {
+		margin: 0.8em 0;
+		color: hsl(279, 6%, 55%);
+		font-size: 0.8rem;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	&__form-info input::placeholder {
+		color: hsl(270, 3%, 87%);
+	}
+	&__form-info input {
+		padding: 0.8em;
+		height: 30px;
+		font-size: 1rem;
+		border: 1px solid hsl(270, 3%, 87%);
+		border-radius: 4px;
+		outline: none;
+	}
+	&__form-info input:focus {
+		border-image: linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+		border-image-slice: 1;
+		border-image-source: 1px;
+		border-radius: 5px;
+	}
+
+	&__form-name,
+	&__form-number {
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-date {
+		display: flex;
+		justify-content: flex-start;
+		padding-bottom: 1em;
+	}
+	&__block-mmyy {
+		margin-right: 1em;
+	}
+	&__expirationdates,
+	&__field-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__field-container {
+		width: 100px;
+	}
+	&__expirationdates input {
+		width: 40px;
+	}
+	&__btn-form-info {
+		padding: 1em 2em;
+		color: hsl(0, 0%, 100%);
+		background-color: hsl(278, 68%, 11%);
+		border: none;
+		border-radius: 8px;
+		text-align: center;
+		cursor: pointer;
+	}
+	&__error {
+		margin-top: 0.4em;
+		color: hsl(0, 100%, 66%);
+		font-size: 0.8rem;
+		visibility: hidden;
+	}
+
+	&__error-text input {
+		border: 1px solid hsl(0, 100%, 66%);
+	}
+	&__error-text &__error {
+		visibility: visible;
+	}
+
+	&__popup {
+		position: absolute;
+		top: 0;
+		right: -100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		background-color: hsl(0, 0%, 100%);
+		transition: right 0.3s;
+	}
+
+	&__popup-right-to-center {
+		right: 0%;
+	}
+	&__popup-img {
+		margin-top: 1em;
+		width: 25%;
+	}
+	&__popup-text {
+		padding: 1em;
+	}
+	&__title-popup {
+		color: hsl(278, 68%, 11%);
+		font-size: 2.2rem;
+	}
+	&__normal-text-popup {
+		margin-top: 1em;
+		color: hsl(279, 6%, 55%);
+		font-size: 1.4rem;
+	}
+	&__btn-popup {
+		padding: 1em 2em;
+		width: 80%;
+		background-color: hsl(278, 68%, 11%);
+		color: hsl(0, 0%, 100%);
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+	&__img {
+		position: relative;
+		background-image: url('../images/bg-main-mobile.png');
+		height: 150px;
+		width: 280px;
+		letter-spacing: 1px;
+		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.363);
+	}
+
+	&__img-front-card {
+		position: absolute;
+		bottom: -20%;
+		left: 9%;
+		width: 75%;
+		background: none;
+		border-radius: 8px;
+		box-shadow: -20px 12px 30px rgba(0, 0, 0, 0.363);
+		z-index: 1;
+	}
+	&__img-logo {
+		position: absolute;
+		top: 50%;
+		left: 15%;
+		width: 50px;
+		z-index: 1;
+	}
+	&__text-box-img {
+		position: absolute;
+		bottom: -5%;
+		left: 15%;
+		height: 30px;
+		color: hsl(0, 0%, 100%);
+		font-size: 1rem;
+		z-index: 1;
+	}
+	&__img-number {
+		font-size: 1.4rem;
+	}
+	&__text-img {
+		display: flex;
+		justify-content: space-between;
+		transform: translate(0%, 110%);
+		width: 175px;
+		font-size: 0.8rem;
+	}
+	&__second-img {
+		width: 280px;
+	}
+	&__img-back-card {
+		position: absolute;
+		top: 9%;
+		right: 5%;
+		width: 60%;
+		box-shadow: -20px 12px 30px rgba(0, 0, 0, 0.363);
+		z-index: 0;
+	}
+	&__second-text {
+		position: absolute;
+		right: 12%;
+		top: 55px;
+		font-size: 0.6rem;
+		color: hsl(0, 0%, 100%);
+	}
+}
+@media screen and (min-width: 375px) {
+	.card {
+		&__info-box {
+			height: 500px;
+			width: 375px;
+		}
+		&__form-info {
+			margin-top: 2em;
+		}
+		&__form-info label {
+			font-size: 1.3rem;
+		}
+		&__form-info input {
+			height: 50px;
+			font-size: 1.6rem;
+		}
+		&__field-container {
+			width: 150px;
+		}
+		&__expirationdates input {
+			width: 70px;
+		}
+		&__btn-form-info {
+			padding: 1em;
+			font-size: 1.8rem;
+		}
+		&__img {
+			width: 375px;
+			height: 200px;
+		}
+		&__text-box-img {
+			bottom: 3%;
+			left: 14%;
+		}
+		&__img-number {
+			font-size: 2rem;
+		}
+		&__text-img {
+			width: 230px;
+			transform: translate(0%, 200%);
+		}
+		&__second-text {
+			right: 12%;
+			top: 72px;
+			font-size: 1rem;
+		}
+		&__popup-text {
+			padding: 2em;
+		}
+		&__title-popup {
+			font-size: 4rem;
+		}
+		&__normal-text-popup {
+			margin-top: 1em;
+			font-size: 2rem;
+		}
+		&__btn-popup {
+			margin-top: 1em;
+			padding: 1em 2em;
+			width: 90%;
+			font-size: 1.8rem;
+		}
+	}
+}
+@media screen and (min-width: 1440px) {
+	.card {
+		flex-direction: row-reverse;
+		&__info-box {
+			height: 1000px;
+			width: 1200px;
+		}
+		&__form-info {
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			text-align: left;
+			// width: 500px;
+		}
+		&__form-info label {
+			font-size: 1.4rem;
+		}
+		&__form-info input {
+			padding-left: 1.4em;
+			height: 60px;
+			font-size: 2rem;
+		}
+		&__form-info input::placeholder {
+			font-size: 2rem;
+		}
+		&__form-date,
+		&__form-name {
+			width: 500px;
+		}
+		&__expirationdates input {
+			width: 80px;
+		}
+		&__field-container {
+			width: 63%;
+		}
+
+		&__btn-form-info {
+			margin-top: 2em;
+			width: 45%;
+			font-size: 2rem;
+		}
+		&__img {
+			height: 1000px;
+			width: 600px;
+			background-size: cover;
+			background-position: top center;
+		}
+		&__img-logo {
+			top: 23%;
+			left: 35%;
+			width: 100px;
+		}
+		&__img-front-card,
+		&__text-box-img {
+			top: 20%;
+			left: 30%;
+			width: 90%;
+		}
+		&__text-box-img {
+			top: 35%;
+			left: 35%;
+		}
+		&__img-number {
+			font-size: 4rem;
+		}
+		&__text-img {
+			transform: translate(2%, 200%);
+			width: 460px;
+			font-size: 1.6rem;
+		}
+		&__img-back-card {
+			top: 55%;
+			left: 50%;
+			width: 80%;
+		}
+		&__second-text {
+			left: 113%;
+			top: 66.5%;
+			font-size: 2rem;
+		}
+		&__popup-img {
+			width: 10%;
+		}
+		&__btn-popup {
+			width: 30%;
+		}
+	}
+}

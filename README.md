@@ -1,3 +1,7 @@
+Live server: https://polite-maamoul-e5a38a.netlify.app/
+![ymtblmv8bbnpazgrfrx6](https://github.com/Kamilbd/interactive-card-details-form-main/assets/99655638/4f768578-cfeb-4638-8b6f-085e834830dc)
+
+
 # Frontend Mentor - Interactive card details form solution
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
